@@ -1,0 +1,6 @@
+Snickers,2.4,12
+Mars,2.3,8
+Aero,3.3,16
+Fanta,2.5,4
+Twix,2.2,1
+Cola,2.5,3
