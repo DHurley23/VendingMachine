@@ -1,6 +1,4 @@
-package test;
-
-import main.Change;
+import Service.Change;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;

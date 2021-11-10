@@ -1,4 +1,4 @@
-package main;
+package Exceptions;
 
 import java.math.BigDecimal;
 

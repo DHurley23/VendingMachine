@@ -1,4 +1,4 @@
-package main;
+package Exceptions;
 
 public class NoItemInventoryException extends Exception{
 

@@ -1,13 +1,20 @@
-package main;
+package Service;
+
+import DAO.InventoryDAOImpl;
+import DTO.Item;
+import Exceptions.InsufficientFundsException;
+import Exceptions.NoItemInventoryException;
 
 import java.math.BigDecimal;
 import java.util.Optional;
+import java.util.Scanner;
 import java.util.stream.Stream;
 
 
 public class VendingMachineServiceImpl implements VendingMachineService<Item>{
 
     private InventoryDAOImpl inventory;
+    private static final String EXIT = "Quit";
 
     public VendingMachineServiceImpl() {
         this.inventory = new InventoryDAOImpl();
@@ -18,10 +25,8 @@ public class VendingMachineServiceImpl implements VendingMachineService<Item>{
         if (this.inventory.getItemsAndQuantities().containsKey(item)) {
             int quantity = this.inventory.getItemsAndQuantities().get(item);
             this.inventory.getItemsAndQuantities().put(item, numberOfItem + quantity);
-            System.out.println("In if" + this.inventory.getItemsAndQuantities());
         } else {
             this.inventory.getItemsAndQuantities().put(item, numberOfItem);
-            System.out.println("In else" + this.inventory.getItemsAndQuantities());
         }
     }
 

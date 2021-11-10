@@ -1,6 +1,6 @@
-package test;
-
-import main.*;
+import DTO.Item;
+import Exceptions.NoItemInventoryException;
+import Service.VendingMachineServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -53,7 +53,7 @@ class VendingMachineServiceImplTest {
         int currentTwixQuantity = 0;
         Item twix = new Item("Twix", BigDecimal.valueOf(2.20));
         vendingMachineService.addItem(twix, currentTwixQuantity);
-        //removing an item that has 0 stock - should throw NoItemInventoryException and not decrement the quantity value.
+        //removing an item that has 0 stock - should throw Exceptions.NoItemInventoryException and not decrement the quantity value.
         Assertions.assertThrows(NoItemInventoryException.class, () -> vendingMachineService.removeItem(twix));
         Item tmp2 = vendingMachineService.getItemByName("Twix");
         int twixQuantity = vendingMachineService.getInventory().getItemsAndQuantities().get(tmp2);
@@ -73,7 +73,7 @@ class VendingMachineServiceImplTest {
     void getItemById() {
         Item crisps = new Item("Crisps", BigDecimal.valueOf(4.2));
         vendingMachineService.addItem(crisps, 3);
-        Item temp = vendingMachineService.getItemById("A3");
+        Item temp = vendingMachineService.getItemById("B1");
         assertEquals(crisps, temp);
     }
 

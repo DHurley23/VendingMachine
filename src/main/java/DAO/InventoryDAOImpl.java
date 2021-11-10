@@ -1,4 +1,6 @@
-package main;
+package DAO;
+
+import DTO.Item;
 
 import java.io.*;
 import java.math.BigDecimal;
