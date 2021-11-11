@@ -1,6 +1,6 @@
 Main DAO classes - Includes two DAO interfaces, one for the Audit DAO and one for the File I/O.
 
-Service.Change class - Makes use of the Service.CoinValues Enum.
+DTO.Change class - Makes use of the DTO.CoinValues Enum.
 
 Two custom Exception classes - InsufficientFundException is a runtime exception, Exceptions.NoItemInventoryException is a compiletime exception.
 

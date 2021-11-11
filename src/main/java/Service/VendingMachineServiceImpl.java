@@ -1,13 +1,12 @@
 package Service;
 
 import DAO.InventoryDAOImpl;
+import DTO.Change;
 import DTO.Item;
-import Exceptions.InsufficientFundsException;
 import Exceptions.NoItemInventoryException;
 
 import java.math.BigDecimal;
 import java.util.Optional;
-import java.util.Scanner;
 import java.util.stream.Stream;
 
 
